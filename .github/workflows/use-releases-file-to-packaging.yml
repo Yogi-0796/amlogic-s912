@@ -13,22 +13,22 @@ on:
       branch:
         description: "Select Branch [ official / lede ]"
         required: false
-        default: "lede"
+        default: "lede_official"
       openwrt_soc:
         description: "Choose Amlogic SoC."
         required: false
-        default: "all"
+        default: "s912"
       openwrt_kernel:
         description: "Choose kernel version."
         required: false
-        default: "5.15.25_5.10.100"
+        default: "5.10.100"
       openwrt_size:
         description: "Set the rootfs size."
         required: false
         default: "1024"
 
 env:
-  TZ: Asia/Shanghai
+  TZ: Asia/Jakarta
 
 jobs:
   build:
