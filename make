@@ -62,7 +62,7 @@ script_repo="https://github.com/ophub/luci-app-amlogic/tree/main/luci-app-amlogi
 kernel_repo="https://github.com/ophub/kernel/tree/main/pub"
 version_branch="stable"
 auto_kernel="true"
-build_kernel=("5.10.100")
+build_kernel=("5.15.25")
 # Set supported SoC
 build_openwrt=(
     "s912"
@@ -281,7 +281,7 @@ confirm_version() {
     case "${soc}" in
     s912 | octopus)
         FDTFILE="meson-gxm-octopus-planet.dtb"
-        UBOOT_OVERLOAD="u-boot-zyxq.bin"
+        UBOOT_OVERLOAD=""
         MAINLINE_UBOOT=""
         ANDROID_UBOOT=""
         ;;
