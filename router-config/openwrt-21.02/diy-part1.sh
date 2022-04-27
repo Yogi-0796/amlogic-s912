@@ -12,10 +12,6 @@
 
 # Add a feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-#SourceHelmi
-sed -i 's/option check_signature/# option check_signature/g' /etc/opkg.conf
-echo "src/gz custom_generic https://raw.githubusercontent.com/lrdrdn/my-opkg-repo/main/generic" >> /etc/opkg/customfeeds.conf
-echo "src/gz custom_arch https://raw.githubusercontent.com/lrdrdn/my-opkg-repo/main/$(cat /etc/os-release | grep OPENWRT_ARCH | awk -F '"' '{print $2}')" >> /etc/opkg/customfeeds.conf
 
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
